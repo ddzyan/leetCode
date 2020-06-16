@@ -1,5 +1,7 @@
 // hashMap解法
 
+const HashMap = require('./HashMap');
+
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -7,15 +9,15 @@
  */
 const twoSum = function (nums, target) {
   const indexArr = [];
-  const hashMap = new Map();
+  const hashMap = new HashMap();
   for (let index = 0; index < nums.length; index++) {
     const item = nums[index];
-    if (hashMap.has(item)) {
+    if (hashMap.containsKey(item)) {
       indexArr[0] = index;
       indexArr[1] = hashMap.get(item);
       return indexArr;
     }
-    hashMap.set(target - item, index);
+    hashMap.put(target - item, index);
   }
 };
 

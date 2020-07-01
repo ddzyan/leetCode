@@ -1,6 +1,5 @@
 /*
-  采用递归一直进行二分查找，知道中位数刚好等于目标值，则返回。
-  解决上一个版本只有一次递归的问题
+  将内容分为左右两部分，判断目标值再那个区间，再每次缩小一半，直到获得最终答案
 */
 
 /**
@@ -24,8 +23,8 @@ var search = function (nums, target) {
   return -1;
 };
 
-/* console.log(search([-1, 0, 3, 5, 9, 12], 9));
+console.log(search([-1, 0, 3, 5, 9, 12], 9));
 console.log(search([-1, 0, 3, 5, 9, 12], 2));
 console.log(search([5], 5));
-console.log(search([-1, 0, 5], 5)); */
+console.log(search([-1, 0, 5], 5));
 console.log(search([-1, 0, 3, 5, 9, 12], 9));

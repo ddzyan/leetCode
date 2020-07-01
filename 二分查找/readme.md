@@ -1,4 +1,4 @@
-leetcode 题号：704
+leetcode 题号：704,69
 
 核心内容为：
 
